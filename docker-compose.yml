@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=c0gn41zem0n404dm1n
+  github-analytics:
+    image: github-analytics
+    ports:
+      - "8081:8081"
+    environment:
+      - MONGO_HOST=mongo
+  github-analytics-react:
+    image: github-analytics-react
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_GITHUB_APP_URI=http://localhost:8081
