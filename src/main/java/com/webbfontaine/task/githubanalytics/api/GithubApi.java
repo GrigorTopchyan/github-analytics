@@ -31,7 +31,7 @@ public class GithubApi {
     }
 
     @RequestMapping("/repositories/{id}/collaborators")
-    public Publisher<Author> getCollaborators(@PathVariable long id){
+    public Flux<Author> getCollaborators(@PathVariable long id){
         log.info("Request collaborators for GithubRepo {}", id);
         return searchService.findAllCollaborators(id);
     }

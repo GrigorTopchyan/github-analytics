@@ -22,7 +22,9 @@ Github analytics application consist of
 
 ## Github Analytics 
 
-The URL for the application is `http://localhost:3000/`
+The URL for the application is `http://localhost:3000/
+* username: admin
+* password: qwerty12345
 
 
 
